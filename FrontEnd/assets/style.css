@@ -95,7 +95,7 @@ nav li {
 	font-size: 1.2em;
 }
 
-li:hover {
+li a:hover {
 	color: #B1663C;
 }
 #introduction {
@@ -178,6 +178,7 @@ input[type="submit"]{
 	width: 180px;
 	text-align: center;
 	border-radius: 60px ;
+	cursor: pointer;
 }
 
 footer nav ul {
@@ -186,3 +187,11 @@ footer nav ul {
 	margin: 2em
 }
 
+a{
+	color: #3D3D3D;
+	text-decoration: none;
+}
+.mot-de-passe-oublie{
+	text-align: center;
+	text-decoration: underline;
+}
