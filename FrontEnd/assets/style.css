@@ -155,7 +155,7 @@ margin: auto;
 	flex-direction: column;
 }
 
-#contact input,#connexion input {
+#contact input,#connexion input, #input-titre, #categorie-selection {
 	height: 50px;
 	font-size: 1.2em;
 	border: none;
@@ -169,7 +169,7 @@ margin: auto;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-input[type="submit"]{
+input[type="submit"],.btn-ajouter-photo{
 	font-family: 'Syne';
 	font-weight: 700;
 	color: white;
@@ -179,6 +179,7 @@ input[type="submit"]{
 	text-align: center;
 	border-radius: 60px ;
 	cursor: pointer;
+	border: none;
 }
 
 footer nav ul {
@@ -194,4 +195,124 @@ a{
 .mot-de-passe-oublie{
 	text-align: center;
 	text-decoration: underline;
+}
+
+/*Barre mode admin en haut*/
+.mode-admin {
+	background-color: #000000;
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	padding: 1em;
+}
+
+.mode-admin p{
+	background-color: #000000;
+	color: #FFFF;
+	border: none;
+}
+.projet{
+	display: flex;
+	justify-content: center;
+}
+/*Bouton modifier a côté de projet*/
+.modifier{
+	border: none;
+	cursor: pointer;
+	width: 18%;
+	height: 1.5em;
+	display: none;
+	justify-content: center;
+	text-align: center;
+	font-size: 14px;
+	margin: 0.5em 0 0 0.5em;
+	background-color: #FFFF;
+
+}
+.bxr{
+	margin: 0.1em 0.5em 0 2em;
+}
+/*Style conteneur modal*/
+.modal{
+	background-color: rgba(255, 255, 255, 0.5);
+	/* display: none; */
+}
+
+.contenu-modal{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 7%);
+    width: 30em;
+	height: 30em;
+    padding: 1.5em;
+    background-color: #FFFFFF;
+	border-radius: 0.6em;
+}
+
+#gallerie-modal {
+    flex-grow: 1; /* Permet à la galerie de prendre tout l'espace disponible */
+    width: 100%;
+    overflow-y: auto; /* Ajoute un défilement si nécessaire */
+}
+
+hr{
+	width: 50%;
+}
+.fermer-modal{
+	background-color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	width: 1em;
+	height: 1em;
+	align-self: flex-end;
+
+}
+.titre-galerie{
+	font-size: 1.6em;
+	align-self: center;
+	margin-top: 1em;
+}
+
+.btn-ajouter-photo{
+	width: 50%;
+	padding: 0.5em;
+	margin-top: 0;
+}
+
+/*Style formulaire d'ajout de photo*/
+
+.formulaire-ajout-photo{
+	display: flex;
+	flex-direction: column;
+}
+
+.titre-form{
+    font-family: 'Work Sans';
+    font-size: 1.6em;
+	text-align: center;
+}
+
+.ajouter-photo{
+	background-color: #E8F1F6;
+	width: 26em;
+	height: 10em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.choix-photo{
+	background-color: #CBD6DC;
+	padding: 1em;
+	border-radius: 3em;
+	cursor: pointer;
+}
+
+input[type="file"]{
+	display: none;
 }
