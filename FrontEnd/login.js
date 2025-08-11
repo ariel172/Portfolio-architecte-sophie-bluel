@@ -68,9 +68,11 @@ async function verifierChamp() {
 }
 // Cacher le message d'erreur dès qu'on retape un champ
 [email, motDePasse].forEach(champ => {
-    champ.addEventListener("input", () => {
+    if(champ){
+        champ.addEventListener("input", () => {
         messageErreur.style.display = "none";
-    });
+        });
+    }
 });
 
 /**Appel de la fonction pour initialiser la vérification 
