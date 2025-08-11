@@ -347,8 +347,8 @@ input[type="file"]{
 	display: flex;
 	flex-direction: column;
 }
-.titre{
-	font-size: 0.8em;
+.titre, .texte-option{
+	font-size: 0.8em ;
 }
 #input-titre,#categorie-selection{
 	align-self: center;
