@@ -2,6 +2,7 @@
 const email = document.getElementById("email");
 const motDePasse = document.getElementById("mot-de-passe");
 const formulaire = document.querySelector("form");
+const messageErreur = document.querySelector(".message-erreur");
 
 /**
  * Fonction asynchrone pour gérer la soumission du formulaire
@@ -22,8 +23,10 @@ async function verifierChamp() {
 
         // Vérification de la validité des champs email et mot de passe
         if (!regExp.test(valeurEmail.trim()) || !valeurMotDePasse.trim()) {
-            // Si l'email est invalide ou si le mot de passe est vide, affiche une alerte
-            alert("Merci de saisir un email valide et un mot de passe.");
+            // Si l'email est invalide ou si le mot de passe est vide, affiche une erreur
+            messageErreur.textContent = "Veuillez entrer un email valide et un mot de passe.";
+            messageErreur.style.display = "block";
+            return;  // Sort de la fonction pour ne pas continuer la soumission
         } else {
             try {
                 // Envoi de la requête de connexion au serveur
@@ -63,6 +66,12 @@ async function verifierChamp() {
         }
     });
 }
+// Cacher le message d'erreur dès qu'on retape un champ
+[email, motDePasse].forEach(champ => {
+    champ.addEventListener("input", () => {
+        messageErreur.style.display = "none";
+    });
+});
 
 /**Appel de la fonction pour initialiser la vérification 
  * champs et la soumission du formulaire

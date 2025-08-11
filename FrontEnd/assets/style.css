@@ -169,6 +169,10 @@ margin: auto;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
+.message-erreur{
+	color: red;
+	display: none;
+}
 input[type="submit"],.btn-ajouter-photo{
 	font-family: 'Syne';
 	font-weight: 700;
@@ -234,8 +238,14 @@ a{
 }
 /*Style conteneur modal*/
 .modal{
-	background-color: rgba(255, 255, 255, 0.5);
-	/* display: none; */
+	background-color: rgba(0, 0, 0, 0.3);
+	height: 100vh;
+	width: 100vw;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
 }
 
 .contenu-modal{
@@ -244,7 +254,7 @@ a{
 	justify-content: space-between;
 	align-items: center;
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, 7%);
     width: 30em;
@@ -263,15 +273,19 @@ a{
 hr{
 	width: 50%;
 }
+
 .fermer-modal{
+	margin-top: -1em;
+}
+.fermer-modal, .retour-modal{
 	background-color: #FFFFFF;
 	border: none;
 	cursor: pointer;
 	width: 1em;
 	height: 1em;
 	align-self: flex-end;
-
 }
+
 .titre-galerie{
 	font-size: 1.6em;
 	align-self: center;
@@ -285,10 +299,13 @@ hr{
 }
 
 /*Style formulaire d'ajout de photo*/
-
 .formulaire-ajout-photo{
 	display: flex;
 	flex-direction: column;
+}
+
+.retour-modal{
+	align-self: flex-start;
 }
 
 .titre-form{
@@ -296,15 +313,20 @@ hr{
     font-size: 1.6em;
 	text-align: center;
 }
-
-.ajouter-photo{
+.apercu-photo{
+	margin: 1em;
 	background-color: #E8F1F6;
 	width: 26em;
 	height: 10em;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
+	border-radius: 0.18em;
+	padding: 0.5em;
+}
+.apercu-photo p{
+	font-size: 0.63em;
 }
 .choix-photo{
 	background-color: #CBD6DC;
@@ -312,7 +334,34 @@ hr{
 	border-radius: 3em;
 	cursor: pointer;
 }
+.fa-image{
+	color: #B9C5CC;
+	font-size: 4em;
+}
 
 input[type="file"]{
 	display: none;
+}
+
+.info-photo{
+	display: flex;
+	flex-direction: column;
+}
+.titre{
+	font-size: 0.8em;
+}
+#input-titre,#categorie-selection{
+	align-self: center;
+	width: 22em;
+	height: 3.18em;
+	margin: 0.2em 0 1em 0;
+	background-color: #FFFFFF;
+}
+.hr-form{
+	width: 22em;
+	margin-bottom: -0.5em;
+}
+
+.btn-valider{
+	padding: 0.5em;
 }
