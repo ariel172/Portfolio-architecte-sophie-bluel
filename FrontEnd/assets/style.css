@@ -254,20 +254,44 @@ a{
 	justify-content: space-between;
 	align-items: center;
     position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 7%);
-    width: 30em;
-	height: 30em;
+    top: 50%;       
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    width: 39em;
+	height: 40em;
     padding: 1.5em;
     background-color: #FFFFFF;
 	border-radius: 0.6em;
 }
 
 #gallerie-modal {
-    flex-grow: 1; /* Permet à la galerie de prendre tout l'espace disponible */
-    width: 100%;
-    overflow-y: auto; /* Ajoute un défilement si nécessaire */
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3em;
+    justify-content: flex-start;
+}
+figure {
+    position: relative; 
+    display: inline-block;
+}
+
+.bx-trash {
+    padding: 0.2em;
+    font-size: 1em;  
+    color: white;
+    background-color: #000000;
+    position: absolute;
+    top: 1em;   
+    right: 0.5em; 
+    cursor: pointer;
+}
+
+.image-modal{
+	width: 6.2em;
+	height: 100%;
+	justify-content: center;
+	border: 1px solid black;
 }
 
 hr{
@@ -289,7 +313,7 @@ hr{
 .titre-galerie{
 	font-size: 1.6em;
 	align-self: center;
-	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 .btn-ajouter-photo{
@@ -347,8 +371,11 @@ input[type="file"]{
 	display: flex;
 	flex-direction: column;
 }
-.titre, .texte-option{
-	font-size: 0.8em ;
+.titre{
+	font-size: 1.2em ;
+}
+.texte-option{
+	font-size: 0.8em;
 }
 #input-titre,#categorie-selection{
 	align-self: center;
