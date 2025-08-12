@@ -295,7 +295,8 @@ figure {
 }
 
 hr{
-	width: 50%;
+	width: 26.25em;
+	margin-bottom: -2em;
 }
 
 .fermer-modal{
@@ -309,7 +310,9 @@ hr{
 	height: 1em;
 	align-self: flex-end;
 }
-
+.photo{
+	margin-top: -3em;
+}
 .titre-galerie{
 	font-size: 1.6em;
 	align-self: center;
@@ -317,9 +320,10 @@ hr{
 }
 
 .btn-ajouter-photo{
-	width: 50%;
+	width: 14.8em;
+	height: 2.3em;
 	padding: 0.5em;
-	margin-top: 0;
+	margin-bottom: -0.5em;
 }
 
 /*Style formulaire d'ajout de photo*/
@@ -347,10 +351,10 @@ hr{
 	justify-content: space-around;
 	align-items: center;
 	border-radius: 0.18em;
-	padding: 0.5em;
+	padding: 1.5em;
 }
 .apercu-photo p{
-	font-size: 0.63em;
+	font-size: 0.8em;
 }
 .choix-photo{
 	background-color: #CBD6DC;
@@ -379,7 +383,7 @@ input[type="file"]{
 }
 #input-titre,#categorie-selection{
 	align-self: center;
-	width: 22em;
+	width: 24em;
 	height: 3.18em;
 	margin: 0.2em 0 1em 0;
 	background-color: #FFFFFF;
@@ -390,5 +394,8 @@ input[type="file"]{
 }
 
 .btn-valider{
+	width: 14.8em;
+	height: 2.3em;
 	padding: 0.5em;
+	margin-top: 0;
 }
