@@ -1,10 +1,9 @@
-const email = document.getElementById("email");
-const motDePasse = document.getElementById("mot-de-passe");
-const formulaire = document.querySelector("form");
-const messageErreur = document.querySelector(".message-erreur");
-
-
 async function verifierChamp() {
+    const email = document.getElementById("email");
+    const motDePasse = document.getElementById("mot-de-passe");
+    const formulaire = document.querySelector("form");
+    const messageErreur = document.querySelector(".message-erreur");
+
     formulaire.addEventListener("submit", async (e) => {
         e.preventDefault();
         
